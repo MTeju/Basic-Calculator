@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Basic Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="index.js"></script>
+
+
+    <div class="container">
+        <div class="top-container">
+            <input type="text" class="display" id="js-input" autofocus placeholder="Calculator">
+            <div class="js-result"></div>
+        </div>
+        <div class="bottom-container">
+            <div class="top-div">
+                <button onclick="calSqrt('sqrt ')"><i class="fa-solid fa-square-root-variable"></i></button>
+                <button onclick="calculate('^')"><i class="fa-solid fa-angle-up"></i></button>
+                <button onclick="calculate('!');"><i class="fa-solid fa-exclamation"></i></button>
+                <button>log</button>
+                <button onclick="calculate('Abs ');">Abs</button>                
+            </div>
+            <div class="row">
+                <button onclick="Clear();">AC</button>
+                <button class="op dispRes" style="padding: 13px 15px;">Sin</button>
+                <button class="op dispRes" onclick="calculate('%')"><i class="fa-solid fa-percent"></i></button>
+                <button class="op dispRes" onclick="calculate('/')"><i class="fa-solid fa-divide"></i></button>
+            </div>
+
+            <div class="row">
+                <button class="num dispRes" onclick="calculate('7')">7</button>
+                <button class="num dispRes" onclick="calculate('8')">8</button>
+                <button class="num dispRes" onclick="calculate('9')">9</button>
+                <button class="op dispRes"  onclick="calculate('*')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="row">
+                <button class="num dispRes" onclick="calculate('4')">4</button>
+                <button class="num dispRes" onclick="calculate('5')">5</button>
+                <button class="num dispRes" onclick="calculate('6')">6</button>
+                <button class="op dispRes" onclick="calculate('-')"><i class="fa-solid fa-minus"></i></button>
+            </div>
+
+            <div class="row">
+                <button class="num dispRes" style="padding: 13px 25px;" onclick="calculate('1')"> 1</button>
+                <button class="num dispRes" onclick="calculate('2')">2</button>
+                <button class="num" onclick="calculate('3')">3</button>
+                <button class="op" onclick="calculate('+')"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div class="row">
+                <button class="num dispRes" onclick="calculate(0)">0</button>
+                <button class="num dispRes" style="padding: 12px 25px;" onclick="calculate('.')">.</button>
+                <button class="op dispRes" onclick="clearOne();"><i class="fa-regular fa-rectangle-xmark"></i></button>
+                <button class="op dispRes" style="background: rgba(155,241,204,255);" onclick="calResult()"><i class="fa-solid fa-equals"></i></button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
